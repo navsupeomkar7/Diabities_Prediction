@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-image:url('https://www.myheart.org.sg/wp-content/uploads/2019/04/Diabetes-and-Heart-Disease_-Whats-the-Connection_-scaled.jpg');">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Diabetes Prediction</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Welcome to {{user.username}} !! </a>
+                </li>
+                      
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/predict">Predict</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout1">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Form Container -->
+   
+<div class="container py-5">
+
+        
+
+    <div class="card mb-4">
+      <div class="card-body p-5">
+        <b><h4 class="mb-4" style="font-size:50px;text-align:center;font-size:150%;" >Diebetic Disease Prediction Output</h4>
+        </b>
+        <center> <h1 style="font-size:50px;color:black;text-align:center;" >---------------------------------------------</h1></center>
+        <div class="custom-scrollbar-css p-2">
+          <p class="font-times">
+           <b> <h1 style="font-size:50px;color:brown;text-align:center;font-size:300%;"> Prediction is {{ ans }}</h1></p></b>
+           <center> <h1 style="font-size:50px;color:black;text-align:center;" >---------------------------------------------</h1></center>
+        <br><br>
+          {% if ans == "Positive" %}
+          <li style="font-size:30px;color:green;text-align:center;">Diebetic Disease is Predict</li>
+
+
+          <li style="font-size:30px;color:green;text-align:center;">"It is advised to consult with a healthcare provider for further evaluation. "</li>
+            <li style="font-size:30px;color:green;text-align:center;">"Consider lifestyle changes such as increasing physical activity, maintaining a healthy diet, "</li>
+                <li style="font-size:30px;color:green;text-align:center;">"and monitoring your blood sugar levels regularly. Medication may also be necessary depending on the healthcare provider's recommendations."</li>
+        
+          {% elif ans == "Negative" %}
+              
+          <li style="font-size:30px;color:green;text-align:center;">Diebetic Disease is not Predict</li>
+
+                <li style="font-size:30px;color:green;text-align:center;">"You appear to be at low risk for diabetes based on the provided information."</li>
+                <li style="font-size:30px;color:green;text-align:center;"> "Continue maintaining a healthy lifestyle to minimize your risk in the future."</li>
+             
+          {% endif %}
+      </div>
+
+      </div>
+    </div>
+      </div>
+  </div>
+  </div>
+
+</div>
+
+<br><br><br><br>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

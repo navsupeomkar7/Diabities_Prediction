@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>ABOUT US</title>
+    <style>
+        /* CSS styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+    padding: 0;
+    background-image: url('static/images/home.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+
+h1 {
+	font-size: 2em; /* Increase font size for h1 */
+	font-weight: bold; /* Make h1 bold */
+	color: rgb(1, 7, 12);
+}
+
+h3 {
+	font-size: 1.5em; /* Uniform font size for paragraphs */
+	color: rgb(33, 120, 11);
+}
+
+p{
+	color: rgba(236, 233, 233, 0.934);
+}
+
+.team-cards {
+	display: flex;
+	flex-wrap: nowrap; /* Prevent wrapping */
+	overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
+	-webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS devices */
+	justify-content: space-between; /* Distribute cards evenly */
+}
+
+.card {
+	width: 23%; /* Adjust card width to fit four cards in a line */
+	margin-bottom: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	overflow: hidden;
+	transition: transform 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+}
+
+.card-img img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.card-info {
+	padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	.card {
+		width: 45%; /* Adjust card width for smaller screens */
+	}
+}
+
+
+
+
+.about {
+	background: rgb(224, 251, 222);
+	background-image: url('home.jpg');
+	padding: 100px 0 20px 0;
+	text-align: center;
+}
+
+.about h1 {
+	font-size: 3rem;
+	margin-bottom: 20px;
+}
+
+.about p {
+	font-size: 1.7rem;
+	font-family: Arial, Helvetica, sans-serif;
+	color:white;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.about-info {
+	margin: 2rem 2rem;
+	display: flex;
+	font-family: Arial,sans-serif;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+}
+
+.about-img {
+	width: 19rem;
+	height: 19rem;
+}
+
+.about-img img {
+	width: 300px;
+	height: 250px;
+	border-radius: 35px;
+	border:solid black;
+	object-fit: contain;
+}
+
+.about-info p {
+	font-size: 1.4rem; /about para/
+	margin: 0 2rem;
+	text-align: justify;
+}
+
+button {
+	outline: 0;
+	padding: 10px;
+	margin: 2rem;
+	font-size: 1rem;
+	color: black;
+	background-color: white;
+	text-align: center;
+	cursor: pointer;
+	width: 15rem;
+	border-radius: 10px;
+}
+
+button:hover {
+	background-color: rgb(11, 109, 162);
+	color: #fff;
+	border-radius: 10px;
+	border:solid black;
+}
+
+.team {
+	padding: 30px 0;
+	text-align: center;
+}
+
+.team h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+.team-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	margin-top: 20px;
+}
+
+.card {
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	transition: transform 0.2s, box-shadow 0.2s;
+	width: 18.5rem;
+	height: 25rem;
+	margin-top: 10px;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+	width: 18rem;
+	height: 12rem;
+}
+
+.card-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.card-info button {
+	margin: 2rem 1rem;
+}
+
+.card-name {
+	font-size: 2rem;
+	margin: 10px 0;
+}
+
+.card-role {
+	font-size: 1rem;
+	color: #888;
+	margin: 5px 0;
+}
+
+.card-email {
+	font-size: 1rem;
+	color: #555;
+}
+
+
+
+@media (max-width: 768px) {
+	nav {
+		display: block;
+	}
+
+	.logo {
+		text-align: center;
+	}
+
+	.nav-links {
+		margin-top: 1rem;
+		justify-content: space-between;
+	}
+
+	.nav-links li {
+		margin-right: 0;
+	}
+
+	.about h1 {
+		font-size: 2rem;
+	}
+
+	.about p {
+		font-size: 1rem;
+		
+	}
+
+	.about-info {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.about-img {
+		width: 60%;
+		height: 60%;
+		margin-bottom: 1rem;
+		
+	}
+
+	.about-info p {
+		margin: 1rem 2rem;
+		color:white;
+
+	}
+
+	.about-info button {
+		margin: 1rem 2rem;
+		width: 10rem;
+	}
+
+	.team {
+		margin: 0 1rem;
+	}
+}
+
+/* Home button styles */
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.home-button:hover {
+    background-color: white;
+    color: white;
+}
+
+    </style>
+
+</head>
+
+<body>	
+    
+    <!-- Home Page Button -->
+    <a href="/" class="home-button" style="color:green"><i class="fa fa-home"></i> Home</a>
+
+    <section class="about">
+        <h1>ABOUT US</h1>
+        <h3>
+            Medical Image Denoising using Convolutional Denoising Autoencoders
+        </h3>
+        <div class="about-info">
+            <div class="about-img">
+                <img src="" >
+            </div>
+            <div>
+                <p style="color: black;">Image denoising is an important pre-processing step
+                    in medical image analysis. Different algorithms have been proposed in past three decades with varying denoising performances.
+                    More recently, having outperformed all conventional methods,
+                    deep learning based models have shown a great promise. These
+                    methods are however limited for requirement of large training
+                    sample size and high computational costs. In this paper we show
+                    that using small sample size, denoising autoencoders constructed
+                    using convolutional layers can be used for efficient denoising
+                    of medical images. Heterogeneous images can be combined to
+                    boost sample size for increased denoising performance. Simplest
+                    of networks can reconstruct images with corruption levels so high
+                    that noise and signal are not differentiable to human eye.</p>
+                <button>Read More...</button>
+            </div>
+        </div>
+    
+        <h1>Meet Our Team</h1>
+        <div class="team-cards">
+            <!-- Cards here -->
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="" alt="User 1">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Student Name 1</h2>
+                    <p class="card-role">Team Memeber</p>
+                    <p><button class="button">Example1@gmail.com</button></p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="" alt="User 2">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Student Name 1</h2>
+                    <p class="card-role">Team Memeber</p>
+                    <p><button class="button">Example1@gmail.com</button></p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="" alt="User 3">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Student Name 1</h2>
+                    <p class="card-role">Team Member</p>
+                    <p><button class="button">Example1@gmail.com</button></p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="" alt="User 4">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Student Name 1</h2>
+                    <p class="card-role">Team Member</p>
+                    <p><button class="button">Example1@gmail.com</button></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+  
+  <title>Prediction</title>
+
+  <body style='background-image: url("{% static 'images/image.jpeg' %}");'>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Diabities Prediction</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='/'>Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container">
+        <br><br>    <br><br>
+    
+        <div style="width: 50%;border-style: outset;padding: 20px;margin-left: 300px;background-color:white">
+                       <center><h1 class="card-title text-center mb-0">Diabities Diseas Prediction</h1></center> <br>
+                    
+                    <div class="card-body">
+                       <form method="post" action='/result' class="space-y-3">  
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="Glucose" class="form-label">Glucose :</label>
+                                <input type="text" name="Glucose" id="Glucose" class="form-control form-control-lg" required>
+                            </div>
+    
+                            <div class="mb-3">
+                                <label for="bp" class="form-label">Blood Pressure :(mmHg)</label>
+                                <input type="text" name="bp" id="bp" class="form-control form-control-lg" required>
+                            </div>
+                          
+                            <div class="mb-3">
+                                <label for="skinthic" class="form-label ">Skin Thickness :</label>
+                                <input type="text" name="skinthic" id="skinthic" class="form-control form-control-lg" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="Insulin" class="form-label">Insulin :(ml U/I)</label>
+                                <input type="text" name="Insulin" id="Insulin" class="form-control form-control-lg" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="bmi" class="form-label">BMI :(kg/m2)</label>
+                                <input type="text" name="bmi" id="bmi" class="form-control form-control-lg" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="Pedigreefun" class="form-label">Diabities Pedigree function:</label>
+                                <input type="text" name="Pedigreefun" id="Pedigreefun" class="form-control form-control-lg" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="Age" class="form-label">Age :</label>
+                                <input type="text" name="Age" id="Age" class="form-control form-control-lg" required>
+                            </div>
+    
+                            {% comment %} {% if form.errors %}
+                                {% for field in form %}
+                                    {% for error in field.errors %}
+                                        <div class="alert alert-danger">{{ error|escape }}</div>
+                                    {% endfor %}
+                                {% endfor %}
+                                {% for error in form.non_field_errors %}
+                                    <div class="alert alert-danger">{{ error|escape }}</div>
+                                {% endfor %}
+                            {% endif %} {% endcomment %}
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit Form</button><br>
+                                <button type="Reset" class="btn btn-primary btn-lg">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    </div>
+    
+    </body>
+    </html>

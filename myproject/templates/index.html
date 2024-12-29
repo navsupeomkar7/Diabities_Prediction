@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> website</title>
+    <link rel="stylesheet" href="{% static 'css/home trial.css' %}">
+</head>
+<body style='background-image: url("{% static 'images/img.jpg' %}");'>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="">
+                Diabetes Prediction
+            </div>
+            <div class="menu">
+              <a href=" ">Home</a>
+              <a href="about/" >About Us</a>
+                <a href="contact/">Contact</a>
+            </div>
+            <div class="register">
+              <a href="/register" >Register</a>
+                <a href="/login_view">Login</a>
+            </div>
+        </nav>
+        <section  class="h-text">
+            <h1> Free Diabetes Prediction
+            </h1>
+            
+            <br>
+            <a href="/login_view">Get Started</a>
+        </section>
+    </header>
+</body>
+</html>
