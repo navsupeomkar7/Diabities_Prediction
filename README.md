@@ -1,4 +1,4 @@
-🩺 Diabetes Prediction System
+🩺  Disease Prediction System
 
 A Machine Learning-based web application that predicts the likelihood of diabetes in a person based on medical attributes. This project uses Logistic Regression and provides an intuitive UI for users to input health data and get predictions instantly.
 
